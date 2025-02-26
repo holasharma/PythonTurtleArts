@@ -1,7 +1,5 @@
 import time
 import turtle
-import threading
-from concurrent.futures import ThreadPoolExecutor
 
 screen = turtle.Screen()
 screen.bgcolor('black')
@@ -78,11 +76,11 @@ def making_trishul():
     t.forward(57)
     turtle.reset()
     t.seth(145)
-    for i in range(180):  # for bottom curve
+    for i in range(180):  # for  curve
         t.left(0.85)
         t.forward(.10)
 
-    # for i in range(50):  # for bottom curve
+    # for i in range(50):  # for  curve
     #     t.left(3.57)
     #     t.forward(0.5)
 
@@ -91,7 +89,7 @@ def making_trishul():
 
     turtle.reset()
     t.seth(-95)
-    for i in range(188):  # for bottom curve
+    for i in range(188):  # for  curve
         t.left(0.81)
         t.forward(0.06)
 
@@ -114,7 +112,7 @@ def making_trishul():
     t.seth(-4)
     t.forward(61)
 
-    for i in range(185):  # for bottom curve
+    for i in range(185):  # for  curve
         t.left(0.72)
         t.forward(0.05)
 
@@ -122,7 +120,7 @@ def making_trishul():
     t.seth(91)
     t.forward(41)
 
-    for i in range(185):  # for bottom curve
+    for i in range(185):  # for  curve
         t.left(0.76)
         t.forward(0.07)
     turtle.reset()
@@ -145,40 +143,40 @@ def making_trishul():
     t.seth(-45)
     # start of right part og trishul
     # First Arc
-    for i in range(80):  # for bottom curve
+    for i in range(80):  # for  curve
         t.left(1.1)
         t.forward(1.5)
 
     turtle.reset()
-    for i in range(40):  # for bottom curve
+    for i in range(40):  # for  curve
         t.left(1.3)
         t.forward(1.2)
 
     turtle.reset()
 
-    for i in range(50):  # for bottom curve
+    for i in range(50):  # for  curve
         t.left(0.6)
         t.forward(1.2)
 
-    for i in range(35):  # for bottom curve
+    for i in range(35):  # for  curve
         t.right(2.6)
         t.forward(1.6)
 
-    for i in range(35):  # for bottom curve
+    for i in range(35):  # for  curve
         t.left(1.6)
         t.backward(1.6)
 
-    for i in range(15):  # for bottom curve
+    for i in range(15):  # for  curve
         t.left(1.6)
         t.backward(0.9)
 
     t.backward(15)
 
-    for i in range(75):  # for bottom curve
+    for i in range(75):  # for  curve
         t.right(0.9)
         t.backward(0.8)
 
-    for i in range(85):  # for bottom curve
+    for i in range(85):  # for  curve
         t.right(1)
         t.backward(0.9)
 
@@ -217,35 +215,35 @@ def making_trishul():
         t.forward(1.5)
 
     turtle.reset()
-    for i in range(40):  # for bottom curve
+    for i in range(40):  # for  curve
         t.right(1.3)
         t.forward(1.2)
 
     turtle.reset()
 
-    for i in range(50):  # for bottom curve
+    for i in range(50):  # for  curve
         t.right(0.6)
         t.forward(1.2)
 
-    for i in range(35):  # for bottom curve
+    for i in range(35):  # for  curve
         t.left(2.6)
         t.forward(1.6)
 
-    for i in range(35):  # for bottom curve
+    for i in range(35):  # for  curve
         t.right(1.6)
         t.backward(1.6)
 
-    for i in range(15):  # for bottom curve
+    for i in range(15):  # for  curve
         t.right(1.6)
         t.backward(0.9)
 
     t.backward(15)
 
-    for i in range(80):  # for bottom curve
+    for i in range(80):  # for  curve
         t.left(0.9)
         t.backward(0.8)
 
-    for i in range(76):  # for bottom curve
+    for i in range(76):  # for  curve
         t.left(1.20)
         t.forward(-1.21)
 
