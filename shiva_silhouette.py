@@ -1,9 +1,10 @@
 import turtle
+import time
 from turtle import Screen, Turtle
 
-#backgroubnd tint
+# background tint
 # Deep maroon → warm orange (matches reference)
-color  = (0.35, 0.08, 0.06)   # dark maroon red (top)
+color = (0.35, 0.08, 0.06)  # dark maroon red (top)
 target = (0.95, 0.45, 0.15)  # warm orange glow (bottom)
 turtle.title("Shiva Art")
 tur = turtle.Screen()
@@ -17,24 +18,23 @@ turt = Turtle()
 turt.color(color)
 # turtle.tracer(0)
 turt.penup()
-turt.goto(-width/2, height/2)
+turt.goto(-width / 2, height / 2)
 turt.pendown()
 
 direct = 1
 
-for distance, y in enumerate(range(height//2, -height//2, -1)):
+for distance, y in enumerate(range(height // 2, -height // 2, -1)):
+    turt.forward(width * direct)
+    turt.color([color[i] + delta * distance for i, delta in enumerate(deltas)])
+    turt.sety(y)
 
-   turt.forward(width * direct)
-   turt.color([color[i] + delta * distance for i, delta in enumerate(deltas)])
-   turt.sety(y)
-
-   direct *= -1
+    direct *= -1
 
 turtle.update()
 # object
 pen = turtle.Turtle()
 
-#start drawing hill top
+# start drawing hill top
 pen.fillcolor("black")
 pen.begin_fill()
 pen.penup()
@@ -99,13 +99,13 @@ pen.forward(35)
 pen.right(35)
 pen.forward(45)
 # close shape to bottom of screen
-pen.goto(width/2 + 50, -height/2 - 50)   # bottom-right
-pen.goto(-width/2 - 50, -height/2 - 50)  # bottom-left
-pen.goto(-500, -250)                     # back to start
+pen.goto(width / 2 + 50, -height / 2 - 50)  # bottom-right
+pen.goto(-width / 2 - 50, -height / 2 - 50)  # bottom-left
+pen.goto(-500, -250)  # back to start
 
-pen.end_fill() # complete the hill top base
+pen.end_fill()  # complete the hill top base
 
-#Now Starting the Shiva outline
+# Now Starting the Shiva outline
 
 pen.hideturtle()
 pen.speed(0)
@@ -120,7 +120,7 @@ pen.pendown()
 
 pen.begin_fill()
 
-#Start of shiv left bottom curve
+# Start of shiv left bottom curve
 pen.setheading(130)
 pen.forward(10)
 for i in range(10):
@@ -156,21 +156,21 @@ for i in range(30):
 pen.left(35)
 pen.forward(13)
 pen.left(45)
-#left arm continuation
+# left arm continuation
 for i in range(20):
     pen.right(3)
     pen.forward(1.8)
 pen.left(30)
 pen.forward(20)
-#left shoulder
-print("left shoulder start",pen.position())
+# left shoulder
+print("left shoulder start", pen.position())
 for i in range(35):
     pen.right(2)
     pen.forward(1.1)
 for i in range(48):
     pen.left(1.8)
     pen.forward(1.1)
-#face left part
+# face left part
 for i in range(25):
     pen.left(0.5)
     pen.forward(1.1)
@@ -178,11 +178,11 @@ for i in range(40):
     pen.right(1.5)
     pen.forward(1.2)
 pen.setheading(85)
-#choti
+# choti
 for i in range(40):
     pen.right(1.1)
     pen.forward(1.2)
-#top choti curve
+# top choti curve
 for i in range(25):
     pen.right(6.5)
     pen.forward(0.9)
@@ -192,7 +192,7 @@ for i in range(22):
 for i in range(14):
     pen.left(6.8)
     pen.backward(1.1)
-print("right face start",pen.position())
+print("right face start", pen.position())
 print(pen.heading())
 pen.setheading(-50)
 for i in range(18):
@@ -201,7 +201,7 @@ for i in range(18):
 for i in range(18):
     pen.left(-0.7)
     pen.forward(1.1)
-#right face curve
+# right face curve
 for i in range(15):
     pen.right(1.5)
     pen.forward(0.6)
@@ -209,7 +209,7 @@ for i in range(25):
     pen.right(0.001)
     pen.forward(0.9)
 pen.forward(8)
-#rigt shoulder
+# rigt shoulder
 for i in range(20):
     pen.left(3.7)
     pen.forward(1.6)
@@ -217,7 +217,7 @@ pen.forward(8)
 for i in range(19):
     pen.left(2)
     pen.forward(1.1)
-#right shoulder curve towards arm
+# right shoulder curve towards arm
 for i in range(25):
     pen.right(2)
     pen.forward(0.9)
@@ -226,7 +226,7 @@ for i in range(15):
     pen.right(0.1)
     pen.forward(0.9)
 
-#start of right arm
+# start of right arm
 pen.setheading(-65)
 for i in range(24):
     pen.left(0.4)
@@ -234,7 +234,7 @@ for i in range(24):
 for i in range(26):
     pen.right(1)
     pen.forward(1.1)
-#start of right forearm
+# start of right forearm
 pen.setheading(-55)
 for i in range(12):
     pen.left(1.2)
@@ -249,7 +249,7 @@ pen.forward(2)
 for i in range(6):
     pen.right(8.9)
     pen.forward(1)
-#start of right fist
+# start of right fist
 pen.setheading(-50)
 for i in range(10):
     pen.left(1.8)
@@ -261,7 +261,7 @@ for i in range(13):
     pen.left(5)
     pen.forward(1)
 pen.forward(2)
-#right fist thumb start
+# right fist thumb start
 for i in range(13):
     pen.right(6)
     pen.forward(0.9)
@@ -277,7 +277,7 @@ for i in range(7):
     pen.forward(0.9)
 pen.right(70)
 pen.forward(5)
-#start of right thigh end
+# start of right thigh end
 pen.left(140)
 pen.forward(13)
 for i in range(10):
@@ -290,14 +290,14 @@ for i in range(17):
     pen.right(3.7)
     pen.forward(1.2)
 pen.forward(2.5)
-#----------------End of Shiva Outer Body----------------
-#Start of Shive Inner body
+# ----------------End of Shiva Outer Body----------------
+# Start of Shive Inner body
 
 pen.setheading(180)
 pen.forward(38)
 
-print("Position when moving to top towards right arm to complete",pen.position())
-#moving to top to start making right arm
+print("Position when moving to top towards right arm to complete", pen.position())
+# moving to top to start making right arm
 pen.up()
 pen.setheading(90)
 pen.forward(47)
@@ -315,7 +315,7 @@ for i in range(35):
     pen.forward(1)
 pen.left(24)
 pen.forward(19)
-#start of right underarm
+# start of right underarm
 pen.left(45)
 for i in range(8):
     pen.left(2.5)
@@ -358,9 +358,9 @@ pen.backward(170)
 pen.setheading(90)
 pen.forward(4)
 pen.setheading(180)
-pen.circle(-10, 130)# small inward left waist curve
+pen.circle(-10, 130)  # small inward left waist curve
 pen.forward(4)
-#start of left waist till underarm
+# start of left waist till underarm
 for i in range(8):
     pen.right(8.5)
     pen.forward(0.8)
@@ -372,7 +372,7 @@ for i in range(25):
 for i in range(10):
     pen.right(2)
     pen.forward(1.1)
-#start of underarm
+# start of underarm
 pen.right(45)
 for i in range(7):
     pen.left(2.5)
@@ -414,7 +414,7 @@ pen.forward(30)
 for i in range(30):  # last left body wasit curve to complete
     pen.left(0.7)
     pen.forward(1)
-print("Position when completing last left wasit curve ",pen.position())
+print("Position when completing last left wasit curve ", pen.position())
 
 pen.up()
 pen.goto(178.38, -85.17)
@@ -425,44 +425,44 @@ pen.end_fill()
 pen.up()
 pen.goto(-24.48, -42.86)
 pen.down()
-pen.setheading(2)   # slight downward angle
+pen.setheading(2)  # slight downward angle
 for _ in range(40):
-    pen.left(0.001)   # bend downward
+    pen.left(0.001)  # bend downward
     pen.forward(1)
 pen.setheading(-0.5)
 for _ in range(80):
-    pen.left(0.001)   # bend downward
+    pen.left(0.001)  # bend downward
     pen.forward(1.1)
 pen.right(1.5)
 for _ in range(20):
-    pen.left(0.001)   # bend downward
+    pen.left(0.001)  # bend downward
     pen.forward(1)
 pen.right(1.5)
 for _ in range(2):
-    pen.left(0.001)   # bend downward
+    pen.left(0.001)  # bend downward
     pen.forward(1)
-print("Position when completing last right wasit curve ",pen.position())
+print("Position when completing last right wasit curve ", pen.position())
 for _ in range(53):
-    pen.left(0.2)   # bend downward
+    pen.left(0.2)  # bend downward
     pen.forward(1)
-print("Position reached ",pen.position())
-pen.setheading(-90)   # straight down
+print("Position reached ", pen.position())
+pen.setheading(-90)  # straight down
 for _ in range(44):
     pen.forward(1)
-print("Position reached ",pen.position())
-pen.setheading(180)   # straight up
+print("Position reached ", pen.position())
+pen.setheading(180)  # straight up
 pen.forward(202)
-print("Position reached ",pen.position())
+print("Position reached ", pen.position())
 pen.setheading(90)
 pen.forward(40)
-print("Position reached ",pen.position())
+print("Position reached ", pen.position())
 pen.end_fill()
 pen.setheading(-10)
 pen.forward(10)
 pen.width(30)
 pen.forward(190)
 pen.up()
-pen.goto(-24.48,-42.86)
+pen.goto(-24.48, -42.86)
 pen.forward(30)
 pen.setheading(-10)
 pen.width(1)
@@ -472,57 +472,57 @@ pen.width(50)
 pen.forward(100)
 pen.setheading(0)
 for _ in range(85):
-    pen.right(0.01)   # bend downward
+    pen.right(0.01)  # bend downward
     pen.forward(1.2)
 pen.width(1)
 
-#Shiva bocy complete now, Start of Trishul
+# Shiva bocy complete now, Start of Trishul
 pen.up()
 pen.goto(-90, -84)
 pen.pendown()
 pen.width(5)
 pen.setheading(90)
 pen.forward(230)
-#start of left dumroo part
+# start of left dumroo part
 pen.begin_fill()
 pen.width(2)
 pen.left(115)
 pen.forward(18)
 for _ in range(15):
-    pen.right(8.5)   # bend downward
+    pen.right(8.5)  # bend downward
     pen.forward(1.2)
 pen.setheading(90)
 pen.forward(18)
 for _ in range(15):
-    pen.right(7.5)   # bend downward
+    pen.right(7.5)  # bend downward
     pen.forward(0.9)
 pen.forward(18)
-print("come back from where width 5 line will resume again ",pen.position())
+print("come back from where width 5 line will resume again ", pen.position())
 pen.setheading(0)
 pen.forward(5)
 pen.left(25)
-#start of right dumroo part
+# start of right dumroo part
 pen.forward(17)
 for _ in range(15):
-    pen.right(7.5)   # bend downward
+    pen.right(7.5)  # bend downward
     pen.forward(0.9)
 pen.forward(19)
 for _ in range(15):
-    pen.right(8.5)   # bend downward
+    pen.right(8.5)  # bend downward
     pen.forward(0.9)
 pen.left(25)
 pen.forward(19)
 pen.end_fill()
-#Now start from top of dumroo continuing the trishul main part
+# Now start from top of dumroo continuing the trishul main part
 pen.up()
-pen.goto(-90.40,165.13)
+pen.goto(-90.40, 165.13)
 pen.down()
 pen.setheading(90)
 pen.width(5)
 pen.forward(30)
-print("Current Position before starting Trishul Prongs ",pen.position())
+print("Current Position before starting Trishul Prongs ", pen.position())
 pen.begin_fill()
-#start of right trishul part
+# start of right trishul part
 pen.width(2)
 pen.setheading(-45)
 for i in range(8):  # for  curve
@@ -577,7 +577,7 @@ pen.forward(12)
 for i in range(9):  # for  curve
     pen.right(5.1)
     pen.forward(1)
-print("position of right prong curve end ",pen.position())
+print("position of right prong curve end ", pen.position())
 pen.setheading(90)
 pen.forward(15)
 pen.setheading(60)
@@ -591,8 +591,8 @@ pen.forward(12)
 pen.setheading(-90)
 pen.forward(75)
 pen.end_fill()
-#end of right prong and middle part
-#now start of left prong
+# end of right prong and middle part
+# now start of left prong
 pen.up()
 pen.goto(-90.40, 195.13)
 pen.down()
@@ -670,9 +670,9 @@ for i in range(9):  # for  curve
 pen.forward(7)
 pen.end_fill()
 # End of Shiva Body
-#start of snake from neck
+# start of snake from neck
 pen.up()
-pen.goto(-7,125)
+pen.goto(-7, 125)
 pen.down()
 pen.begin_fill()
 pen.setheading(170)
@@ -712,22 +712,72 @@ for i in range(15):  # for  curve
     pen.left(1.2)
     pen.backward(1.1)
 pen.end_fill()
-# -------- TEXT SECTION --------
+# # -------- TEXT SECTION --------
+# pen.up()
+# pen.color("#f2d6b3")   # soft warm off-white (matches glow vibe)
+#
+# # Happy (smaller, cursive style feel)
+# pen.goto(50, -180)
+# pen.setheading(0)
+# pen.write("Happy", align="center", font=("Lucida Handwriting", 20, "normal"))
+#
+# # Maha Shivratri (main text)
+# pen.goto(50, -215)
+# pen.write("Maha Shivratri", align="center", font=("Times New Roman", 32, "bold"))
+#
+# # OM NAMAH SHIVAY (small subtitle)
+# pen.goto(55, -250)
+# pen.write("OM NAMAH SHIVAY", align="center", font=("Arial", 14, "normal"))
+
 pen.up()
-pen.color("#f2d6b3")   # soft warm off-white (matches glow vibe)
+pen.color("#f5e6d3")
 
-# Happy (smaller, cursive style feel)
-pen.goto(50, -180)
-pen.setheading(0)
-pen.write("Happy", align="center", font=("Lucida Handwriting", 20, "normal"))
 
-# Maha Shivratri (main text)
-pen.goto(50, -215)
-pen.write("Maha Shivratri", align="center", font=("Times New Roman", 32, "bold"))
+# -------- ANIMATED TEXT --------
+def animated_text():
+    t = turtle.Turtle()
+    t.hideturtle()
+    t.penup()
+    t.color("#f2d6b3")
 
-# OM NAMAH SHIVAY (small subtitle)
-pen.goto(55, -250)
-pen.write("OM NAMAH SHIVAY", align="center", font=("Arial", 14, "normal"))
+    # Start from left side
+    x = -300
+    y1 = -180
+    y2 = -215
+    y3 = -250
+
+    # Slide to right
+    for _ in range(60):
+        t.clear()
+
+        t.goto(x, y1)
+        t.write("Happy", align="center", font=("Lucida Handwriting", 20, "normal"))
+
+        t.goto(x, y2)
+        t.write("Maha Shivratri", align="center", font=("Times New Roman", 32, "bold"))
+
+        t.goto(x, y3)
+        t.write("OM NAMAH SHIVAY", align="center", font=("Arial", 14, "normal"))
+
+        x += 6  # control speed here
+        time.sleep(0.03)
+
+    # Final position in center
+    t.clear()
+
+    t.goto(55, y1)
+    t.write("Happy", align="center", font=("Lucida Handwriting", 20, "normal"))
+
+    t.goto(55, y2)
+    t.write("Maha Shivratri", align="center", font=("Times New Roman", 32, "bold"))
+
+    t.goto(55, y3)
+    t.write("OM NAMAH SHIVAY", align="center", font=("Arial", 14, "normal"))
+
+
+animated_text()
+
+# -------- SLIDING TEXT ANIMATION End--------
 
 # ---------------- DONE ----------------
 # turtle.update()
